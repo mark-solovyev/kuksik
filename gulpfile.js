@@ -11,6 +11,11 @@ const PATHS = {
     templates: {
         views: "./src/views",
         pages: "./src/views/index.pug"
+    },
+    styles: {
+        root: "./src/styles",
+        entry: "./src/styles/main.scss",
+        normalize: "node_modules/normalize.css/normalize.css"
     }
 }
 
@@ -26,7 +31,7 @@ gulp.task("pug", ()=> {
 });
 
 gulp.task("styles", ()=> {
-    return gulp.src(["./src/styles/main.scss", "node_modules/normalize.css/normalize.css"])
+    return gulp.src([PATHS.styles.entry, PATHS.styles.normalize])
         .pipe(concat("main.scss"))
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest("./dist/styles"));
@@ -47,6 +52,6 @@ gulp.task("reload", (callback)=> {
 });
 
 gulp.watch(PATHS.templates.pages, gulp.series("pug"));
+gulp.watch(PATHS.styles.root, gulp.series("styles", "reload"));
 gulp.watch(PATHS.dist, gulp.series("reload"));
-
-gulp.task("default", gulp.series("pug", "server"));
+gulp.task("default", gulp.series("pug", "styles", "server"));

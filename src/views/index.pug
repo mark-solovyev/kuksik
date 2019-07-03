@@ -7,7 +7,19 @@ html(lang="ru")
         title "sekis"
         link(href="styles/main.css" rel="stylesheet" type="text/css")
     body
-        p Какакшка
-        p Двойная какашка
-        p Тройная какаsdfasdf
-        p Какашка номер пять
+        .wrapper
+            .container
+                header
+                    .logo
+                        img(src="" alt="кеака")
+                    - var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
+                    ul.menu
+                        each val in values
+                            li.menu_item #{val}
+                    button.btn заказать
+                .content
+                    .burger
+                    .burger-desc
+                        h2 мы делаем
+                        h1 натуральные бургеры
+                .arrow V
