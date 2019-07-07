@@ -1,4 +1,25 @@
-@import "main2.scss";
-li {
-    color: green
+
+@import "layouts/layouts";
+@import "blocks/container.scss";
+@import "blocks/header.scss";
+.menu {
+    display: flex;
+    margin-left: auto
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px green;
+    flex: 1
+}
+.burger {
+    border: dotted 1px red;
+    display: flex;
+    flex: 1
+}
+.burger-img {
+    width: 50%
+}
+.burger-desc {
+    width: 50%
 }

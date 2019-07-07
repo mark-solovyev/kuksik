@@ -9,17 +9,19 @@ html(lang="ru")
     body
         .wrapper
             .container
-                header
+                header.header
                     .logo
                         img(src="" alt="кеака")
-                    - var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
                     ul.menu
+                        -var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
                         each val in values
                             li.menu_item #{val}
                     button.btn заказать
                 .content
                     .burger
-                    .burger-desc
-                        h2 мы делаем
-                        h1 натуральные бургеры
-                .arrow V
+                        .burger-img
+                            img.burger-img_img(src="" alt="Картинка бургеров")
+                        .burger-desc
+                            h2 мы делаем
+                            h1 натуральные бургеры
+                    .arrow V
