@@ -23,6 +23,10 @@ gulp.task("copy", ()=> {
     return gulp.src("./src/index.html")
         .pipe(gulp.dest("./dist"));
 });
+gulp.task("copy:img", ()=> {
+    return gulp.src("./src/views/img/**/*.*")
+        .pipe(gulp.dest("./dist/img"));
+});
 
 gulp.task("pug", ()=> {
     return gulp.src(PATHS.templates.pages)
@@ -54,4 +58,4 @@ gulp.task("reload", (callback)=> {
 gulp.watch(PATHS.templates.pages, gulp.series("pug"));
 gulp.watch(PATHS.styles.root, gulp.series("styles", "reload"));
 gulp.watch(PATHS.dist, gulp.series("reload"));
-gulp.task("default", gulp.series("pug", "styles", "server"));
+gulp.task("default", gulp.series("pug", "copy:img", "styles", "server"));
