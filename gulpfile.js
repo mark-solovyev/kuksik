@@ -16,6 +16,10 @@ const PATHS = {
         root: "./src/styles",
         entry: "./src/styles/main.scss",
         normalize: "node_modules/normalize.css/normalize.css"
+    },
+    images: {
+        srcFiles: "./src/views/img/**/*.*",
+        destFolder: "./dist/img"
     }
 }
 
@@ -24,8 +28,12 @@ gulp.task("copy", ()=> {
         .pipe(gulp.dest("./dist"));
 });
 gulp.task("copy:img", ()=> {
-    return gulp.src("./src/views/img/**/*.*")
-        .pipe(gulp.dest("./dist/img"));
+    return gulp.src(PATHS.images.srcFiles)
+        .pipe(gulp.dest(PATHS.images.destFolder));
+});
+gulp.task("copy:fonts", ()=> {
+    return gulp.src("./src/fonts/**/*.*")
+        .pipe(gulp.dest("./dist/fonts"));
 });
 
 gulp.task("pug", ()=> {
@@ -56,6 +64,7 @@ gulp.task("reload", (callback)=> {
 });
 
 gulp.watch(PATHS.templates.pages, gulp.series("pug"));
+gulp.watch(PATHS.images.srcFiles, gulp.series("copy:img"));
 gulp.watch(PATHS.styles.root, gulp.series("styles", "reload"));
 gulp.watch(PATHS.dist, gulp.series("reload"));
-gulp.task("default", gulp.series("pug", "copy:img", "styles", "server"));
+gulp.task("default", gulp.series("pug", "copy:img", "copy:fonts", "styles", "server"));

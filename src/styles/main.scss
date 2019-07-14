@@ -2,6 +2,11 @@
 @import "layouts/layouts";
 @import "blocks/container.scss";
 @import "blocks/header.scss";
+@font-face {
+    font-family: "Gagalin-Regular";
+    src: url("./../fonts/Gagalin-Regular/fonts/Gagalin-Regular.woff2") format("woff2"),
+        url("./../fonts/Gagalin-Regular/fonts/Gagalin-Regular.woff") format("woff");
+}
 .menu {
     display: flex;
     margin-left: auto
@@ -38,6 +43,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center
+}
+.we-do {
+    color: orange;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    font-size: 64px
 }
 @media screen and (max-width: 1000px) {
     body {
