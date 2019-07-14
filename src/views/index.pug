@@ -8,21 +8,27 @@ html(lang="ru")
         link(href="styles/main.css" rel="stylesheet" type="text/css")
     body
         .wrapper
-            .container
-                header.header
-                    .logo
-                        img(src="img/logo.svg" alt="кеака")
-                    ul.menu
-                        -var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
-                        each val in values
-                            li.menu_item #{val}
-                    button.btn заказать
-                .content
-                    .burger
-                        .burger-img-wrapper
-                            .burger-img
-                                img.burger-img_img(src="img/burger.jpg" alt="Картинка бургеров")
-                        .burger-desc
-                            h2.we-do мы делаем
-                            h1 натуральные бургеры
-                    .arrow V
+            section.section1
+                .container
+                    header.header
+                        .logo
+                            img(src="img/logo.svg" alt="кеака")
+                        ul.menu
+                            -var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
+                            each val in values
+                                li.menu__item
+                                    a.menu__link(href="#" cursor="pointer") #{val}
+                        a.btn(href="#") заказать
+                    .content
+                        .sections
+                            .sec1
+                                .burger
+                                    img.burger__img(src="img/burger.png" alt="Картинка бургеров")
+                            .sec2
+                                h2.we-do мы делаем
+                                h1.natural-burgers натуральные бургеры
+                        .arrow
+                            img.arrow__img(src="img/arrow-scroll.svg")
+            section.section2
+                .container
+                    p.papa тратата

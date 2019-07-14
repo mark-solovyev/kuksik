@@ -1,0 +1,9 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Ubuntu-Medium";
+
+  src: url("./fonts/Ubuntu-M.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Ubuntu-M.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
