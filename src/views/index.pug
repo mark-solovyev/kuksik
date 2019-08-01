@@ -12,7 +12,8 @@ html(lang="ru")
                 .container
                     header.header
                         .logo
-                            img(src="img/logo.svg" alt="кеака")
+                            a(href="#").logo__link
+                                img(src="img/logo.svg" alt="кеака").logo__img
                         ul.menu
                             -var values = ["о нас", "бургеры", "команда", "меню", "отзывы", "контакты"]
                             each val in values
@@ -20,15 +21,18 @@ html(lang="ru")
                                     a.menu__link(href="#" cursor="pointer") #{val}
                         a.btn(href="#") заказать
                     .content
-                        .sections
-                            .sec1
+                        .content-parts
+                            .content-part1
                                 .burger
                                     img.burger__img(src="img/burger.png" alt="Картинка бургеров")
-                            .sec2
+                            .content-part2
                                 h2.we-do мы делаем
                                 h1.natural-burgers натуральные бургеры
                         .arrow
-                            img.arrow__img(src="img/arrow-scroll.svg")
+                            a.arrow__link(href="#")
+                                img.arrow__img(src="img/arrow-scroll.svg")
             section.section2
                 .container
                     p.papa тратата
+                    header.header
+                        h1 Мы лучшие
