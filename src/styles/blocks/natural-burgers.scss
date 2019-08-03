@@ -1,8 +1,10 @@
-
-.natural-burgers {
-    padding-left: 4rem;
+%sec-title {
     margin: 0;
-    color: #fff;
     font-family: "Lifehack-Medium";
     font-size: 3.3rem
+}
+.natural-burgers {
+    @extend %sec-title;
+    color: #fff;
+    padding-left: 4rem;
 }

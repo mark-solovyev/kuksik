@@ -33,6 +33,26 @@ html(lang="ru")
                                 img.arrow__img(src="img/arrow-scroll.svg")
             section.section2
                 .container
-                    p.papa тратата
-                    header.header
-                        h1 Мы лучшие
+                    header.header2
+                        h1.we-are-the-best Мы лучшие
+                        //ham 97x89, hand 73x85, leaf 88x75
+                    .content
+                        ul.features
+                            -var urlMeat = "img/meat.svg"
+                            -var urlHand = "img/hand.svg"
+                            -var urlLeaf = "img/natural.svg"
+                            -var titleMeat = "100% свежее мясо"
+                            -var titleHand = "Ручная сборка"
+                            -var titleLeaf = "Натуральные ингридиенты"
+                            -var text1 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен."
+                            -var text2 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос."
+                            -var text3 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест."
+
+                            -var featureName = [[urlMeat, titleMeat, text1], [urlHand, titleHand, text2], [urlLeaf, titleLeaf, text3]]
+                            each val in featureName
+                                li.feature
+                                    .feature__logo
+                                        img.feature__img(src=val[0])
+                                    h3.feature__title #{val[1]}
+                                    p.feature__description #{val[2]}
+
