@@ -1,0 +1,13 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Ubuntu-Light";
+  src: url("./fonts/Ubuntu-L.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Ubuntu-L.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/Ubuntu-L.otf") format("opentype"), /* Open Type Font */
+    url("./fonts/Ubuntu-L.svg") format("svg"), /* Legacy iOS */
+    url("./fonts/Ubuntu-L.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("./fonts/Ubuntu-L.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Ubuntu-L.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

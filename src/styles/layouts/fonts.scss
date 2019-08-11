@@ -12,3 +12,8 @@
     font-family: "Ubuntu-Medium";
     src: url("./../fonts/Ubuntu-Medium/fonts/Ubuntu-M.woff2") format("woff2");
 }
+@font-face {
+    font-family: "Ubuntu-Light";
+    src: url("./../fonts/Ubuntu-Light/fonts/Ubuntu-L.woff2") format("woff2"),
+        url("./../fonts/Ubuntu-Light/fonts/Ubuntu-L.woff") format("woff");
+}
