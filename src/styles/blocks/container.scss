@@ -1,11 +1,13 @@
 .container {
-    
+    margin: auto;
     padding: 20px 0 40px 0;
     box-sizing: border-box;
     max-width: 1200px;
     min-width: 480px;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    border: solid 1px blue
+    flex-direction: column
+}
+.container2 {
+    padding-top: 0
 }

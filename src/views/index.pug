@@ -32,11 +32,12 @@ html(lang="ru")
                             a.arrow__link(href="#")
                                 img.arrow__img(src="img/arrow-scroll.svg")
             section.section2
-                .container
+                .container(class="container2")
                     //header.header2
-                    h1.we-are-the-best Мы лучшие
+                   
                         //ham 97x89, hand 73x85, leaf 88x75
                     .content
+                        h1.we-are-the-best Мы лучшие
                         ul.features
                             -var urlMeat = "img/meat.svg"
                             -var urlHand = "img/hand.svg"
@@ -47,7 +48,6 @@ html(lang="ru")
                             -var text1 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен."
                             -var text2 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос."
                             -var text3 = "Драма представляет собой деструктивный цикл. Анапест представляет собой анапест."
-
                             -var featureName = [[urlMeat, titleMeat, text1], [urlHand, titleHand, text2], [urlLeaf, titleLeaf, text3]]
                             each val in featureName
                                 li.feature

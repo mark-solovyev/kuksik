@@ -15,5 +15,8 @@ body, h1, h2, h3, p {
     padding: 1.6rem 0 1.6rem 4rem;
 }
 .we-are-the-best {
-    @extend %main-title
+    @extend %main-title;
+    font-size: 5rem;
+    text-align: center;
+    padding-bottom: 1.5rem
 }

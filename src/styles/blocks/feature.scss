@@ -1,11 +1,9 @@
 .feature {
-    border: solid 1px black;
     width: 32%;
     display: flex;
     flex-direction: column;
     align-items: center;
     &__logo {
-        border: solid 1px green;
         display: flex;
         width: 100px;
         height: 100px
@@ -17,8 +15,7 @@
     &__title {
         @extend %sec-title;
         font-size: 1.8rem;
-        text-align: center;
-        border: solid 1px red
+        text-align: center
     }
     &__description {
         text-align: center;
